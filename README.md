@@ -53,3 +53,4 @@ password_generator/
 - Creating an **API with FastAPI** to generate passwords via HTTP requests
 
 💡 **Got bugs or suggestions? I'd love to hear them! 😎**
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://instagram.com/abdolmajed3)
