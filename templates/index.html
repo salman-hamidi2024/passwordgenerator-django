@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Password Generator</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+      <!-- <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+            body {
+                  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+                  background-size: 300% 300%;
+                  animation: gradientBG 6s ease infinite;
+                  color: white;
+                  font-family: 'Orbitron', sans-serif;
+                  text-align: center;
+                  height: 100vh;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            @keyframes gradientBG {
+                  0% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+                  100% { background-position: 0% 50%; }
+            }
+
+            h1 {
+                  font-size: 2.5rem;
+                  text-transform: uppercase;
+                  letter-spacing: 4px;
+                  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+            }
+
+            button {
+                  background: #ff4b2b;
+                  border: none;
+                  padding: 15px 30px;
+                  border-radius: 10px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  color: white;
+                  box-shadow: 0px 0px 20px rgba(255, 75, 43, 0.6);
+                  transition: all 0.3s ease-in-out;
+            }
+
+            button:hover {
+                  background: #ff416c;
+                  box-shadow: 0px 0px 30px rgba(255, 65, 108, 1);
+                  transform: scale(1.1);
+            }
+
+            a {
+                  text-decoration: none;
+                  color: white;
+            }
+
+            h2 {
+                  margin-top: 20px;
+                  font-size: 1.8rem;
+                  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            }
+
+            p {
+                  font-size: 1.5rem;
+                  background: rgba(255, 255, 255, 0.1);
+                  padding: 10px 20px;
+                  border-radius: 8px;
+                  display: inline-block;
+                  animation: shake 0.5s ease-in-out;
+            }
+
+            @keyframes shake {
+                  0%, 100% { transform: translateX(0); }
+                  25% { transform: translateX(-5px); }
+                  50% { transform: translateX(5px); }
+                  75% { transform: translateX(-5px); }
+            }
+
+            .input-container p {
+                  font-size: 2rem;
+                  font-weight: bold;
+                  color: cyan;
+                  text-shadow: 0px 0px 10px cyan, 0px 0px 20px blue;
+                  padding: 5px 15px;
+                  border-radius: 10px;
+                  display: inline-block;
+                  transition: all 0.3s ease-in-out;
+            }
+
+            /* افکت درخشش هنگام هاور */
+            .input-container p:hover {
+                  text-shadow: 0px 0px 20px cyan, 0px 0px 40px blue;
+                  transform: scale(1.2);
+            }
+
+
+      </style> -->
+</head>
+<body>
+      <form method="post">
+            {% csrf_token %}
+            <h1>Password Generator</h1>
+      
+            <div class="input-container">
+                  <label for="length">Password Length:</label>
+                  <p>
+                        {{ form.length }}
+                  </p>
+            </div>
+      
+            <button type="submit" id="generate-btn">Generate Password</button>
+      
+            <h2>Your Password:</h2>
+            <div id="password-container">
+                  <p>{{ password }}</p>
+            </div>
+      </form>
+      
+      
+  
+      <!-- <script>
+            const generateBtn = document.getElementById('generate-btn');
+            const passwordContainer = document.getElementById('password-container');
+  
+            const generatePassword = () => {
+                  const length = 16;
+                  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]\:;?><,./-=';
+                  let password = '';
+  
+                  for (let i = 0; i < length; i++) {
+                        const at = Math.floor(Math.random() * charset.length);
+                        password += charset.charAt(at);
+                  }
+  
+                  return password;
+            };
+  
+            generateBtn.addEventListener('click', () => {
+                  const password = generatePassword();
+                  passwordContainer.innerHTML = `<p>${password}</p>`;
+            });
+      </script> -->
+  </body>
+  </html>
+  
